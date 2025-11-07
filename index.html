@@ -107,7 +107,6 @@
       margin: 3px;
     }
 
-    /* Lap List */
     .laps-list {
       margin-top: 15px;
       max-height: 150px;
@@ -141,7 +140,6 @@
       background: #777;
     }
 
-    /* Blog */
     .blog-post {
       margin-bottom: 25px;
       padding-bottom: 15px;
@@ -156,7 +154,6 @@
       color: #444;
     }
 
-    /* Contact Form */
     #contact-form {
       display: flex;
       flex-direction: column;
@@ -179,7 +176,6 @@
       font-weight: bold;
     }
 
-    /* Menu Button (for mobile) */
     .menu-btn {
       display: none;
       position: fixed;
@@ -227,10 +223,8 @@
 </head>
 
 <body>
-  <!-- Menu Button -->
   <button class="menu-btn" onclick="toggleSidebar()">☰</button>
 
-  <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
     <h2>Time Tools</h2>
     <div class="sidebar-nav">
@@ -242,7 +236,6 @@
     </div>
   </div>
 
-  <!-- Main Content -->
   <div class="main-content">
     <section id="home">
       <h1>Online Stopwatch and Countdown Timer for Free</h1>
@@ -251,6 +244,7 @@
 
     <section id="timer-tools">
       <h2>Timer Tools</h2>
+
       <div class="container">
         <h3>Stopwatch</h3>
         <div id="stopwatch" class="time">00:00:00.00</div>
@@ -271,75 +265,41 @@
         <button onclick="startCountdown()">Start</button>
         <button onclick="stopCountdown()">Pause</button>
         <button onclick="resetCountdown()">Reset</button>
-        <audio id="alarmSound" src="https://assets.mixkit.co/sfx/download/mixkit-alarm-digital-clock-beep-989.wav"></audio>
         <p id="countdownMessage" style="display:none; color:green; font-weight:bold;">🎉 Time’s up!</p>
       </div>
     </section>
 
     <section id="how-to-use">
-      <h2> How to Use</h2>
-      <p>
-        Use the Stopwatch to measure elapsed time. Press “Lap” to record splits.  
-        Use the Countdown to set a timer with days, hours, minutes, and seconds.
-      </p>
+      <h2>📖 How to Use</h2>
+      <p>Use the Stopwatch to measure elapsed time. Press “Lap” to record splits.  
+      Use the Countdown to set a timer with days, hours, minutes, and seconds.</p>
     </section>
 
-    <!-- Blog Section (Dates Removed) -->
     <section id="blog">
-      <h2> Blog</h2>
-
-<div class="blog-post">
-        <h3>The Pomodoro Technique: Boost Productivity with Timed Intervals</h3>
-        <p>The Pomodoro Technique is a time management method that uses a timer to break work into intervals, traditionally 25 minutes in length, separated by short breaks. Here's how to implement it:</p>
-        <ul>
-          <li>Choose a task you want to work on</li>
-          <li>Set our countdown timer for 25 minutes</li>
-          <li>Work on the task until the timer rings</li>
-          <li>Take a short 5-minute break</li>
-          <li>After four pomodoros, take a longer 15-30 minute break</li>
-        </ul>
-        <p>This technique helps maintain focus and prevents burnout by incorporating regular breaks. Use our countdown timer to practice this method effectively.</p>
-        
-      </div>
-
-      <div class="blog-post">
-        <h3> Creative Ways to Use a Stopwatch for Better Time Management</h3>
-        <p>Stopwatches aren't just for athletes! Discover innovative ways to use timing tools for improved productivity:</p>
-        <ol>
-          <li><strong>Time Boxing:</strong> Allocate fixed time periods for specific tasks</li>
-          <li><strong>Meeting Management:</strong> Keep meetings focused and on schedule</li>
-          <li><strong>Exercise Intervals:</strong> Track workout and rest periods accurately</li>
-          <li><strong>Cooking Precision:</strong> Ensure perfect cooking times for recipes</li>
-          <li><strong>Study Sessions:</strong> Time study periods with scheduled breaks</li>
-        </ol>
-        <p>Our precision stopwatch with millisecond accuracy is perfect for these applications and more.</p>
-        
-    </div>
+      <h2>📝 Blog</h2>
       <div class="blog-post">
         <h3>Top 5 Productivity Hacks Using a Timer</h3>
-        <p>Learn how using a simple online stopwatch or countdown timer can transform your daily routine. From focused Pomodoro sessions to timing your workouts, discover creative ways to boost productivity.</p>
+        <p>Learn how using a simple online stopwatch or countdown timer can transform your daily routine.</p>
       </div>
 
       <div class="blog-post">
         <h3>The Science of Time Management</h3>
-        <p>Understanding how the brain perceives time helps improve how we manage it. This article explores cognitive patterns and how timers can aid in improving focus and reducing procrastination.</p>
+        <p>Understanding how the brain perceives time helps improve how we manage it.</p>
       </div>
-<div class="blog-post">
-                <h3>How to Use the Countdown Timer for Fitness</h3>
-        <p>Set interval training sessions, track rest times, and maintain discipline with countdown timers. We explain how to make your workouts more structured and effective.</p>
+
+      <div class="blog-post">
+        <h3>How to Use the Countdown Timer for Fitness</h3>
+        <p>Set interval training sessions, track rest times, and maintain discipline with countdown timers.</p>
       </div>
     </section>
 
-    <!-- Privacy Policy + Contact -->
     <section id="privacy-policy">
       <h2>🔒 Privacy Policy</h2>
       <p>
-        We value your privacy. This website does not collect or store personal data.  
-        All stopwatch, countdown, and lap data are saved locally in your browser and are not transmitted to any server.
+        We value your privacy. This website does not collect or store personal data.
+        All stopwatch, countdown, and lap data are saved locally in your browser.
       </p>
-      <p>
-        If you have questions or wish to report any privacy-related issues, please contact us using the form below.
-      </p>
+      <p>For inquiries, contact us below:</p>
 
       <form id="contact-form">
         <input type="text" placeholder="Your Name" required />
@@ -364,24 +324,6 @@
           document.getElementById('sidebar').classList.remove('active');
         }
       });
-    });
-
-    function setActiveNav(activeId) {
-      document.querySelectorAll('.sidebar-nav a').forEach(link => link.classList.remove('active'));
-      const activeLink = document.querySelector(`.sidebar-nav a[href="#${activeId}"]`);
-      if (activeLink) activeLink.classList.add('active');
-    }
-
-    window.addEventListener('scroll', () => {
-      const sections = ['home', 'timer-tools', 'how-to-use', 'blog', 'privacy-policy'];
-      const scrollPosition = window.scrollY + 100;
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i]);
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveNav(sections[i]);
-          break;
-        }
-      }
     });
 
     /* Stopwatch */
@@ -456,8 +398,21 @@
       updateLapDisplay();
     }
 
-    /* Countdown */
+    /* Countdown Timer with Web Audio Buzzer */
     let countdownInterval, countdownTime = 0, countdownRunning = false;
+
+    function playBuzzer() {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.type = "square";
+      osc.frequency.value = 800;
+      gain.gain.setValueAtTime(0.2, ctx.currentTime);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.5);
+    }
 
     function updateCountdownDisplay() {
       let d = Math.floor(countdownTime / 86400);
@@ -484,7 +439,7 @@
           updateCountdownDisplay();
           clearInterval(countdownInterval);
           countdownRunning = false;
-          document.getElementById("alarmSound").play();
+          playBuzzer();
           document.getElementById("countdownMessage").style.display = "block";
           return;
         }
