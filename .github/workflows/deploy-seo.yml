@@ -1,6 +1,8 @@
 name: Auto-generate sitemap & robots.txt
 
 on:
+permissions:
+  contents: write
   push:
     branches:
       - main
