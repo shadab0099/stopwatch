@@ -178,55 +178,33 @@ input{width:60px;padding:5px;text-align:center;margin:3px;}
 </div>
 
 <script>
-document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+  // Date in DD/MM/YYYY format
+  const today = new Date();
+  const dd = String(today.getDate()).padStart(2, '0');
+  const mm = String(today.getMonth() + 1).padStart(2, '0'); // months are 0-indexed
+  const yyyy = today.getFullYear();
+  document.getElementById('current-date').textContent = `${dd}/${mm}/${yyyy}`;
 
-function toggleSidebar(){document.getElementById('sidebar').classList.toggle('active');}
-function closeSidebar(){document.getElementById('sidebar').classList.remove('active');}
+  function toggleSidebar(){document.getElementById('sidebar').classList.toggle('active');}
+  function closeSidebar(){document.getElementById('sidebar').classList.remove('active');}
 
-/* Stopwatch */
-let stopwatchInterval, stopwatchTime=0, stopwatchRunning=false, laps=[];
+  /* Stopwatch */
+  let stopwatchInterval, stopwatchTime=0, stopwatchRunning=false, laps=[];
+  function formatTime(ms){let h=Math.floor(ms/3600000), m=Math.floor((ms%3600000)/60000), s=Math.floor((ms%60000)/1000), msPart=Math.floor((ms%1000)/10); return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}.${String(msPart).padStart(2,'0')}`;}
+  function updateStopwatchDisplay(){document.getElementById("stopwatch").innerText=formatTime(stopwatchTime);}
+  function toggleStopwatch(){if(stopwatchRunning){clearInterval(stopwatchInterval); stopwatchRunning=false; document.getElementById("stopwatchToggle").innerText="Resume";} else {let lastTime=Date.now(); stopwatchInterval=setInterval(()=>{let now=Date.now(); stopwatchTime+=now-lastTime; lastTime=now; updateStopwatchDisplay();},10); stopwatchRunning=true; document.getElementById("stopwatchToggle").innerText="Pause";}}
+  function resetStopwatch(){clearInterval(stopwatchInterval); stopwatchTime=0; stopwatchRunning=false; updateStopwatchDisplay(); document.getElementById("stopwatchToggle").innerText="Start";}
+  function recordLap(){if(stopwatchTime===0)return; laps.push(formatTime(stopwatchTime)); updateLapDisplay();}
+  function updateLapDisplay(){const lapContainer=document.getElementById("laps"), clearBtn=document.getElementById("clearLapsBtn"); lapContainer.innerHTML=""; if(laps.length===0){clearBtn.style.display="none"; return;} clearBtn.style.display="inline-block"; laps.slice().reverse().forEach((lap,i)=>{const div=document.createElement("div"); div.textContent=`Lap ${laps.length-i}: ${lap}`; lapContainer.appendChild(div);});}
+  function clearLaps(){laps=[]; updateLapDisplay();}
 
-function formatTime(ms){
-  let h=Math.floor(ms/3600000), m=Math.floor((ms%3600000)/60000), s=Math.floor((ms%60000)/1000), msPart=Math.floor((ms%1000)/10);
-  return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}.${String(msPart).padStart(2,'0')}`;
-}
-function updateStopwatchDisplay(){document.getElementById("stopwatch").innerText=formatTime(stopwatchTime);}
-function toggleStopwatch(){
-  if(stopwatchRunning){clearInterval(stopwatchInterval); stopwatchRunning=false; document.getElementById("stopwatchToggle").innerText="Resume";}
-  else{
-    let lastTime=Date.now();
-    stopwatchInterval=setInterval(()=>{let now=Date.now(); stopwatchTime+=now-lastTime; lastTime=now; updateStopwatchDisplay();},10);
-    stopwatchRunning=true; document.getElementById("stopwatchToggle").innerText="Pause";
-  }
-}
-function resetStopwatch(){clearInterval(stopwatchInterval); stopwatchTime=0; stopwatchRunning=false; updateStopwatchDisplay(); document.getElementById("stopwatchToggle").innerText="Start";}
-function recordLap(){if(stopwatchTime===0)return; laps.push(formatTime(stopwatchTime)); updateLapDisplay();}
-function updateLapDisplay(){
-  const lapContainer=document.getElementById("laps"), clearBtn=document.getElementById("clearLapsBtn"); lapContainer.innerHTML="";
-  if(laps.length===0){clearBtn.style.display="none"; return;}
-  clearBtn.style.display="inline-block";
-  laps.slice().reverse().forEach((lap,i)=>{const div=document.createElement("div"); div.textContent=`Lap ${laps.length-i}: ${lap}`; lapContainer.appendChild(div);});
-}
-function clearLaps(){laps=[]; updateLapDisplay();}
-
-/* Countdown */
-let countdownInterval, countdownTime=0, countdownRunning=false;
-
-function playBuzzer(){const ctx=new(window.AudioContext||window.webkitAudioContext)(),osc=ctx.createOscillator(),gain=ctx.createGain(); osc.connect(gain); gain.connect(ctx.destination); osc.type="square"; osc.frequency.value=800; gain.gain.setValueAtTime(0.2,ctx.currentTime); osc.start(); osc.stop(ctx.currentTime+0.5);}
-function updateCountdownDisplay(){let d=Math.floor(countdownTime/86400),h=Math.floor((countdownTime%86400)/3600),m=Math.floor((countdownTime%3600)/60),s=countdownTime%60; document.getElementById("countdown").innerText=`${String(d).padStart(2,'0')}:${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;}
-function startCountdown(){
-  if(countdownRunning) return;
-  const d=parseInt(document.getElementById("days").value)||0,h=parseInt(document.getElementById("hours").value)||0,m=parseInt(document.getElementById("minutes").value)||0,s=parseInt(document.getElementById("seconds").value)||0;
-  if(d===0&&h===0&&m===0&&s===0&&countdownTime===0) return;
-  if(countdownTime===0) countdownTime=d*86400+h*3600+m*60+s;
-  document.getElementById("countdownMessage").style.display="none"; countdownRunning=true;
-  countdownInterval=setInterval(()=>{
-    if(countdownTime<=0){countdownTime=0; updateCountdownDisplay(); clearInterval(countdownInterval); countdownRunning=false; playBuzzer(); document.getElementById("countdownMessage").style.display="block"; return;}
-    countdownTime--; updateCountdownDisplay();
-  },1000);
-}
-function stopCountdown(){clearInterval(countdownInterval); countdownRunning=false;}
-function resetCountdown(){stopCountdown(); countdownTime=0; updateCountdownDisplay(); document.getElementById("countdownMessage").style.display="none";}
+  /* Countdown */
+  let countdownInterval, countdownTime=0, countdownRunning=false;
+  function playBuzzer(){const ctx=new(window.AudioContext||window.webkitAudioContext)(),osc=ctx.createOscillator(),gain=ctx.createGain(); osc.connect(gain); gain.connect(ctx.destination); osc.type="square"; osc.frequency.value=800; gain.gain.setValueAtTime(0.2,ctx.currentTime); osc.start(); osc.stop(ctx.currentTime+0.5);}
+  function updateCountdownDisplay(){let d=Math.floor(countdownTime/86400),h=Math.floor((countdownTime%86400)/3600),m=Math.floor((countdownTime%3600)/60),s=countdownTime%60; document.getElementById("countdown").innerText=`${String(d).padStart(2,'0')}:${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;}
+  function startCountdown(){if(countdownRunning) return; const d=parseInt(document.getElementById("days").value)||0,h=parseInt(document.getElementById("hours").value)||0,m=parseInt(document.getElementById("minutes").value)||0,s=parseInt(document.getElementById("seconds").value)||0; if(d===0&&h===0&&m===0&&s===0&&countdownTime===0) return; if(countdownTime===0) countdownTime=d*86400+h*3600+m*60+s; document.getElementById("countdownMessage").style.display="none"; countdownRunning=true; countdownInterval=setInterval(()=>{if(countdownTime<=0){countdownTime=0; updateCountdownDisplay(); clearInterval(countdownInterval); countdownRunning=false; playBuzzer(); document.getElementById("countdownMessage").style.display="block"; return;} countdownTime--; updateCountdownDisplay();},1000);}
+  function stopCountdown(){clearInterval(countdownInterval); countdownRunning=false;}
+  function resetCountdown(){stopCountdown(); countdownTime=0; updateCountdownDisplay(); document.getElementById("countdownMessage").style.display="none";}
 </script>
 </body>
 </html>
