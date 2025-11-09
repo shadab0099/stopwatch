@@ -4,10 +4,10 @@
   <meta name="google-site-verification" content="m-hp0D4T98DDT1MVN-QvjAbR46xq985MKk_0rNIoKbA" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Online Stopwatch and Countdown Timer by CalandTime Solutions for Free</title>
-  <meta name="description" content="Use the free online stopwatch and countdown timer by CalandTime Solutions. Track time, record laps, and set countdowns instantly — no download required." />
+  <title>Online Stopwatch & Countdown Timer | CalandTime Solutions</title>
+  <meta name="description" content="Use CalandTime Solutions' free online stopwatch and countdown timer. Track time instantly, set intervals, and boost productivity — no download or signup required.">
 
-  <!-- ✅ Structured Data: WebApplication Schema -->
+  <!-- ✅ WebApplication Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -22,17 +22,59 @@
     },
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "All",
-    "description": "Instant free online stopwatch and countdown timer by CalandTime Solutions. Track time, record laps, and set countdowns in your browser.",
+    "description": "Instant free online stopwatch and countdown timer by CalandTime Solutions. Start tracking time directly in your browser — no signup or download required.",
+    "softwareVersion": "1.0",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
     },
-    "inLanguage": "en"
+    "featureList": [
+      "Free online stopwatch",
+      "Countdown timer",
+      "Lap time tracking",
+      "Interval timing",
+      "Works on mobile and desktop",
+      "No download required"
+    ],
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CalandTime Solutions",
+      "url": "https://calandtimesolutions.com/"
+    }
   }
   </script>
 
-  <!-- ✅ Structured Data: FAQPage Schema -->
+  <!-- ✅ Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://calandtimesolutions.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Online Stopwatch",
+        "item": "https://stopwatch.calandtimesolutions.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Timer Tools",
+        "item": "https://stopwatch.calandtimesolutions.com/#timer-tools"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ✅ Invisible FAQ Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,31 +85,23 @@
         "name": "Is the online stopwatch free to use?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, the online stopwatch and countdown timer by CalandTime Solutions are completely free to use. No registration or download is needed."
+          "text": "Yes, the online stopwatch and countdown timer are completely free to use. No sign-up or download is required."
         }
       },
       {
         "@type": "Question",
-        "name": "Can I use this stopwatch on mobile devices?",
+        "name": "Does the timer save my data?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, the stopwatch and countdown timer are fully responsive and work on mobile, tablet, and desktop browsers."
+          "text": "All stopwatch and countdown data are stored locally in your browser. Nothing is uploaded or shared online."
         }
       },
       {
         "@type": "Question",
-        "name": "Does this tool save my lap or timer data?",
+        "name": "Can I use it on mobile devices?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, all lap and timer data are stored locally in your browser so your privacy is protected."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use this timer offline?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can use it offline after the page has loaded once, but for full reliability, an internet connection is recommended."
+          "text": "Yes, the stopwatch and countdown timer work perfectly on smartphones, tablets, and desktops."
         }
       }
     ]
@@ -75,7 +109,6 @@
   </script>
 
   <style>
-    /* existing CSS unchanged */
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -100,7 +133,6 @@
     .sidebar h2 {
       text-align: center;
       margin-bottom: 20px;
-      color: #fff;
     }
 
     .sidebar-nav {
@@ -125,10 +157,7 @@
 
     .main-content {
       margin-left: 220px;
-      padding: 30px 20px 20px 20px;
-      transition: margin-left 0.3s ease;
-      position: relative;
-      z-index: 1;
+      padding: 30px 20px;
     }
 
     section {
@@ -136,11 +165,22 @@
       background: #fff;
       border-radius: 10px;
       padding: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     h1, h2, h3 {
       color: #800000;
+    }
+
+    .container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .time {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 10px 0;
     }
 
     button {
@@ -151,10 +191,45 @@
       border-radius: 6px;
       cursor: pointer;
       margin: 5px;
-      font-size: 1em;
     }
 
     button:hover {
+      background: #a00000;
+    }
+
+    input {
+      width: 60px;
+      padding: 5px;
+      text-align: center;
+      margin: 3px;
+    }
+
+    .laps-list {
+      margin-top: 15px;
+      max-height: 150px;
+      overflow-y: auto;
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .menu-btn {
+      display: none;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: #800000;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 1.2em;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .menu-btn:hover {
       background: #a00000;
     }
 
@@ -163,11 +238,11 @@
         display: block;
       }
       .sidebar {
-        position: fixed;
         left: -100%;
-        top: 0;
-        height: 100%;
         transition: left 0.3s ease;
+      }
+      .sidebar.active {
+        left: 0;
       }
       .main-content {
         margin-left: 0;
@@ -178,8 +253,213 @@
 </head>
 
 <body>
-  <!-- Existing body content stays the same -->
-  <!-- Stopwatch and countdown HTML -->
-  <!-- ... (your current body code unchanged) ... -->
+  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+  <div class="sidebar" id="sidebar">
+    <h2>Time Tools</h2>
+    <div class="sidebar-nav">
+      <a href="#home" class="active">Home</a>
+      <a href="#timer-tools">Timer Tools</a>
+      <a href="#how-to-use">How to Use</a>
+      <a href="#blog">Blog</a>
+      <a href="#privacy-policy">Privacy Policy</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <section id="home">
+      <h1>Online Stopwatch & Countdown Timer</h1>
+      <p>Track time with precision — free, fast, and secure from CalandTime Solutions.</p>
+      <p>Today's date: <span id="current-date"></span></p>
+    </section>
+
+    <section id="timer-tools">
+      <h2>Timer Tools</h2>
+      <div class="container">
+        <h3>Stopwatch</h3>
+        <div id="stopwatch" class="time">00:00:00.00</div>
+        <button id="stopwatchToggle" onclick="toggleStopwatch()">Start</button>
+        <button onclick="recordLap()">Lap</button>
+        <button onclick="resetStopwatch()">Reset</button>
+        <div id="laps" class="laps-list"></div>
+        <button id="clearLapsBtn" onclick="clearLaps()" style="display:none;">Clear Laps</button>
+      </div>
+
+      <div class="container">
+        <h3>Countdown Timer</h3>
+        <input id="days" type="number" placeholder="Days" min="0">
+        <input id="hours" type="number" placeholder="Hours" min="0" max="23">
+        <input id="minutes" type="number" placeholder="Minutes" min="0" max="59">
+        <input id="seconds" type="number" placeholder="Seconds" min="0" max="59">
+        <div id="countdown" class="time">00:00:00:00</div>
+        <button onclick="startCountdown()">Start</button>
+        <button onclick="stopCountdown()">Pause</button>
+        <button onclick="resetCountdown()">Reset</button>
+        <p id="countdownMessage" style="display:none; color:green; font-weight:bold;">🎉 Time’s up!</p>
+      </div>
+    </section>
+
+    <section id="how-to-use">
+      <h2>How to Use</h2>
+      <p>Start the stopwatch to measure elapsed time or use the countdown timer to set intervals and reminders.</p>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="blog-post">
+        <h3>Top 5 Productivity Hacks Using a Timer</h3>
+        <p>Learn how to use time tracking tools to boost efficiency and focus.</p>
+      </div>
+      <div class="blog-post">
+        <h3>How to Use the Countdown Timer for Fitness</h3>
+        <p>Perfect for interval training and focused workout sessions.</p>
+      </div>
+    </section>
+
+    <section id="privacy-policy">
+      <h2>Privacy Policy</h2>
+      <p>This website does not collect or store personal data. Stopwatch and countdown data remain stored locally in your browser.</p>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    /* Stopwatch */
+    let stopwatchInterval, stopwatchTime = 0, stopwatchRunning = false;
+    let laps = [];
+
+    function formatTime(ms) {
+      let h = Math.floor(ms / 3600000);
+      let m = Math.floor((ms % 3600000) / 60000);
+      let s = Math.floor((ms % 60000) / 1000);
+      let msPart = Math.floor((ms % 1000) / 10);
+      return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}.${String(msPart).padStart(2,'0')}`;
+    }
+
+    function updateStopwatchDisplay() {
+      document.getElementById("stopwatch").innerText = formatTime(stopwatchTime);
+    }
+
+    function toggleStopwatch() {
+      if (stopwatchRunning) {
+        clearInterval(stopwatchInterval);
+        stopwatchRunning = false;
+        document.getElementById("stopwatchToggle").innerText = "Resume";
+      } else {
+        let lastTime = Date.now();
+        stopwatchInterval = setInterval(() => {
+          const now = Date.now();
+          stopwatchTime += now - lastTime;
+          lastTime = now;
+          updateStopwatchDisplay();
+        }, 10);
+        stopwatchRunning = true;
+        document.getElementById("stopwatchToggle").innerText = "Pause";
+      }
+    }
+
+    function resetStopwatch() {
+      clearInterval(stopwatchInterval);
+      stopwatchTime = 0;
+      stopwatchRunning = false;
+      updateStopwatchDisplay();
+      document.getElementById("stopwatchToggle").innerText = "Start";
+    }
+
+    function recordLap() {
+      if (stopwatchTime === 0) return;
+      const lapTime = formatTime(stopwatchTime);
+      laps.push(lapTime);
+      updateLapDisplay();
+    }
+
+    function updateLapDisplay() {
+      const lapContainer = document.getElementById("laps");
+      const clearBtn = document.getElementById("clearLapsBtn");
+      lapContainer.innerHTML = "";
+      if (laps.length === 0) {
+        clearBtn.style.display = "none";
+        return;
+      }
+      clearBtn.style.display = "inline-block";
+      laps.slice().reverse().forEach((lap, i) => {
+        const div = document.createElement("div");
+        div.textContent = `Lap ${laps.length - i}: ${lap}`;
+        lapContainer.appendChild(div);
+      });
+    }
+
+    function clearLaps() {
+      laps = [];
+      updateLapDisplay();
+    }
+
+    /* Countdown */
+    let countdownInterval, countdownTime = 0, countdownRunning = false;
+
+    function playBuzzer() {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.type = "square";
+      osc.frequency.value = 800;
+      gain.gain.setValueAtTime(0.2, ctx.currentTime);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.5);
+    }
+
+    function updateCountdownDisplay() {
+      let d = Math.floor(countdownTime / 86400);
+      let h = Math.floor((countdownTime % 86400) / 3600);
+      let m = Math.floor((countdownTime % 3600) / 60);
+      let s = countdownTime % 60;
+      document.getElementById("countdown").innerText =
+        `${String(d).padStart(2,'0')}:${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+    }
+
+    function startCountdown() {
+      if (countdownRunning) return;
+      const d = parseInt(document.getElementById("days").value) || 0;
+      const h = parseInt(document.getElementById("hours").value) || 0;
+      const m = parseInt(document.getElementById("minutes").value) || 0;
+      const s = parseInt(document.getElementById("seconds").value) || 0;
+      if (d===0 && h===0 && m===0 && s===0 && countdownTime===0) return;
+      if (countdownTime===0) countdownTime = d*86400 + h*3600 + m*60 + s;
+      document.getElementById("countdownMessage").style.display = "none";
+      countdownRunning = true;
+      countdownInterval = setInterval(() => {
+        if (countdownTime <= 0) {
+          countdownTime = 0;
+          updateCountdownDisplay();
+          clearInterval(countdownInterval);
+          countdownRunning = false;
+          playBuzzer();
+          document.getElementById("countdownMessage").style.display = "block";
+          return;
+        }
+        countdownTime--;
+        updateCountdownDisplay();
+      }, 1000);
+    }
+
+    function stopCountdown() {
+      clearInterval(countdownInterval);
+      countdownRunning = false;
+    }
+
+    function resetCountdown() {
+      stopCountdown();
+      countdownTime = 0;
+      updateCountdownDisplay();
+      document.getElementById("countdownMessage").style.display = "none";
+    }
+  </script>
 </body>
 </html>
