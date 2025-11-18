@@ -1,213 +1,1234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Online Stopwatch & Countdown Timer | CalandTime Solutions</title>
-  <link rel="icon" type="image/x-icon" herf="/favicon.ico">
-<meta name="description" content="Use CalandTime Solutions' free online stopwatch and countdown timer. Track time instantly, set intervals, and boost productivity — no download or signup required.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Stopwatch & Countdown Timer | CalandTime Solutions</title>
+  <meta name="description" content="Use CalandTime Solutions' free online stopwatch and countdown timer. Track time instantly, set intervals, and boost productivity — no download or signup required.">
 
-<!-- WebApplication Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Online Stopwatch & Countdown Timer",
-  "url": "https://stopwatch.calandtimesolutions.com/",
-  "image": "https://stopwatch.calandtimesolutions.com/favicon.ico",
-  "author": {
-    "@type": "Organization",
-    "name": "CalandTime Solutions",
-    "url": "https://calandtimesolutions.com/"
-  },
-  "applicationCategory": ["UtilityApplication","SportsApplication"]
-  "operatingSystem": "All",
-  "description": "Instant free online stopwatch and countdown timer by CalandTime Solutions. Start tracking time directly in your browser — no signup or download required.",
-  "softwareVersion": "1.0",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "featureList": [
-    "Free online stopwatch",
-    "Countdown timer",
-    "Lap time tracking",
-    "Interval timing",
-    "Works on mobile and desktop",
-    "No download required"
-  ],
-  "inLanguage": "en",
-  "publisher": {
-    "@type": "Organization",
-    "name": "CalandTime Solutions",
-    "url": "https://calandtimesolutions.com/"
+  <!-- WebApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Online Stopwatch & Countdown Timer",
+    "url": "https://stopwatch.calandtimesolutions.com/",
+    "image": "https://stopwatch.calandtimesolutions.com/favicon.ico",
+    "author": {
+      "@type": "Organization",
+      "name": "CalandTime Solutions",
+      "url": "https://calandtimesolutions.com/"
+    },
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "description": "Instant free online stopwatch and countdown timer by CalandTime Solutions. Start tracking time directly in your browser — no signup or download required.",
+    "softwareVersion": "1.0",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Free online stopwatch",
+      "Countdown timer",
+      "Lap time tracking",
+      "Interval timing",
+      "Works on mobile and desktop",
+      "No download required",
+      "Picture-in-Picture mode"
+    ],
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CalandTime Solutions",
+      "url": "https://calandtimesolutions.com/"
+    }
   }
-}
-</script>
+  </script>
 
-<!-- Breadcrumb Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem","position":1,"name":"Home","item":"https://calandtimesolutions.com/"},
-    {"@type": "ListItem","position":2,"name":"Online Stopwatch","item":"https://stopwatch.calandtimesolutions.com/"},
-    {"@type": "ListItem","position":3,"name":"Timer Tools","item":"https://stopwatch.calandtimesolutions.com/#timer-tools"}
-  ]
-}
-</script>
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://calandtimesolutions.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Online Stopwatch",
+        "item": "https://stopwatch.calandtimesolutions.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Timer Tools",
+        "item": "https://stopwatch.calandtimesolutions.com/#timer-tools"
+      }
+    ]
+  }
+  </script>
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question","name": "Is the online stopwatch free to use?","acceptedAnswer": {"@type": "Answer","text": "Yes, the online stopwatch and countdown timer are completely free to use. No sign-up or download is required."}},
-    {"@type": "Question","name": "Does the timer save my data?","acceptedAnswer": {"@type": "Answer","text": "All stopwatch and countdown data are stored locally in your browser. Nothing is uploaded or shared online."}},
-    {"@type": "Question","name": "Can I use it on mobile devices?","acceptedAnswer": {"@type": "Answer","text": "Yes, the stopwatch and countdown timer work perfectly on smartphones, tablets, and desktops."}}
-  ]
-}
-</script>
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is the online stopwatch free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the online stopwatch and countdown timer are completely free to use. No sign-up or download is required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the timer save my data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All stopwatch and countdown data are stored locally in your browser. Nothing is uploaded or shared online."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use it on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the stopwatch and countdown timer work perfectly on smartphones, tablets, and desktops."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Picture-in-Picture mode?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Picture-in-Picture mode lets you keep the timer visible in a small floating window while you work on other applications."
+        }
+      }
+    ]
+  }
+  </script>
 
-<style>
-body {margin:0;font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;background:#f4f4f4;color:#333;}
+  <style>
+    :root {
+      --primary-color: #800000;
+      --primary-hover: #a00000;
+      --bg-color: #f4f4f4;
+      --card-bg: #fff;
+      --text-color: #333;
+      --border-radius: 12px;
+      --shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
 
-/* Sidebar */
-.sidebar {width:220px;background:#800000;color:white;position:fixed;top:0;left:0;height:100%;overflow-y:auto;transition:transform 0.3s ease;padding-top:20px;z-index:1000;}
-.sidebar h2{text-align:center;margin-bottom:20px;}
-.sidebar-nav{display:flex;flex-direction:column;padding:0 10px;}
-.sidebar-nav a{color:white;padding:10px;border-radius:6px;text-decoration:none;margin-bottom:5px;transition:0.3s;}
-.sidebar-nav a:hover,.sidebar-nav a.active{background:#a00000;}
+    * {
+      box-sizing: border-box;
+    }
 
-/* Main content */
-.main-content{margin-left:220px;padding:30px 20px;}
-section{margin-bottom:40px;background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-h1,h2,h3{color:#800000;}
-.container{text-align:center;margin-bottom:20px;}
-.time{font-size:2em;font-weight:bold;margin:10px 0;}
-button{background:#800000;color:white;border:none;padding:10px 15px;border-radius:6px;cursor:pointer;margin:5px;}
-button:hover{background:#a00000;}
-input{width:60px;padding:5px;text-align:center;margin:3px;}
-.laps-list{margin-top:15px;max-height:150px;overflow-y:auto;background:#f9f9f9;border-radius:8px;padding:10px;border:1px solid #ddd;}
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
 
-/* Menu button */
-.menu-btn{display:none;position:fixed;top:15px;left:15px;background:#800000;color:#fff;border:none;border-radius:6px;padding:10px 14px;font-size:1.2em;cursor:pointer;z-index:1100;}
-.menu-btn:hover{background:#a00000;}
+    .sidebar {
+      width: 220px;
+      background: var(--primary-color);
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      overflow-y: auto;
+      transition: left 0.3s ease;
+      padding-top: 20px;
+      z-index: 1000;
+    }
 
-/* Mobile responsive */
-@media (max-width:768px){
-.menu-btn{display:block;}
-.sidebar{transform:translateX(-220px);}
-.sidebar.active{transform:translateX(0);}
-.main-content{margin-left:0;padding-top:70px;}
-}
-</style>
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+    }
+
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px;
+    }
+
+    .sidebar-nav a {
+      color: white;
+      padding: 12px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-bottom: 5px;
+      transition: 0.3s;
+      font-size: 0.95rem;
+    }
+
+    .sidebar-nav a:hover,
+    .sidebar-nav a.active {
+      background: var(--primary-hover);
+    }
+
+    .main-content {
+      margin-left: 220px;
+      padding: 30px 20px;
+      transition: margin-left 0.3s ease;
+      min-height: 100vh;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 25px;
+      box-shadow: var(--shadow);
+    }
+
+    h1, h2, h3 {
+      color: var(--primary-color);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    .container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .time {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin: 20px 0;
+      font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
+      color: var(--primary-color);
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      background: linear-gradient(135deg, #800000, #a00000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    button {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s;
+      min-width: 110px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    button:hover {
+      background: var(--primary-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    button:active {
+      transform: translateY(-1px);
+    }
+
+    button.secondary {
+      background: #6c757d;
+    }
+
+    button.secondary:hover {
+      background: #5a6268;
+    }
+
+    button.success {
+      background: #28a745;
+    }
+
+    button.success:hover {
+      background: #218838;
+    }
+
+    button.warning {
+      background: #ffc107;
+      color: #212529;
+    }
+
+    button.warning:hover {
+      background: #e0a800;
+    }
+
+    input {
+      width: 75px;
+      padding: 12px;
+      text-align: center;
+      margin: 6px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    input:focus {
+      border-color: var(--primary-color);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.1);
+    }
+
+    .laps-list {
+      margin-top: 20px;
+      max-height: 180px;
+      overflow-y: auto;
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 15px;
+      border: 1px solid #eee;
+    }
+
+    .laps-list div {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+      font-weight: 500;
+    }
+
+    .laps-list div:last-child {
+      border-bottom: none;
+    }
+
+    .menu-btn {
+      display: none;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 1.2em;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      z-index: 1100;
+      transition: all 0.3s;
+    }
+
+    .menu-btn:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .pip-container {
+      position: fixed;
+      top: 100px;
+      right: 20px;
+      width: 360px;
+      background: linear-gradient(135deg, #800000, #600000);
+      color: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      z-index: 1001;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      cursor: move;
+      user-select: none;
+      border: 2px solid rgba(255,255,255,0.1);
+      transition: all 0.3s;
+    }
+
+    .pip-container.dragging {
+      border-color: rgba(255,255,255,0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      transform: scale(1.02);
+    }
+
+    .pip-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 15px;
+      cursor: move;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .pip-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .pip-time {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin: 12px 0;
+      font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
+      letter-spacing: 2px;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      background: linear-gradient(135deg, #ffffff, #e0e0e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .pip-controls {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pip-controls button {
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      min-width: auto;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .pip-close {
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: white;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0;
+      min-width: auto;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .pip-close:hover {
+      background: rgba(255,255,255,0.25);
+      transform: scale(1.1) rotate(90deg);
+      color: white;
+    }
+
+    .pip-toggle {
+      background: #4a5568;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      padding: 14px 24px;
+      font-size: 1.1rem;
+    }
+
+    .pip-toggle:hover {
+      background: #2d3748;
+      transform: translateY(-3px);
+    }
+
+    .header-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 15px;
+      gap: 8px;
+    }
+
+    .pip-laps-section {
+      width: 100%;
+      margin-top: 12px;
+      max-height: 140px;
+      overflow-y: auto;
+    }
+
+    .pip-laps-list {
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 10px;
+      max-height: 120px;
+      overflow-y: auto;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .pip-laps-list div {
+      padding: 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+      font-weight: 500;
+    }
+
+    .pip-laps-list div:last-child {
+      border-bottom: none;
+    }
+
+    .pip-inputs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin: 12px 0;
+    }
+
+    .pip-inputs input {
+      width: 55px;
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 2px;
+      border: 2px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border-radius: 6px;
+    }
+
+    .pip-inputs input::placeholder {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .pip-inputs input:focus {
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.15);
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.1);
+    }
+
+    .pip-countdown-message {
+      display: none;
+      color: #4ade80;
+      font-weight: bold;
+      font-size: 0.95rem;
+      margin-top: 8px;
+      text-align: center;
+      padding: 8px 12px;
+      background: rgba(74, 222, 128, 0.1);
+      border-radius: 8px;
+      border: 1px solid rgba(74, 222, 128, 0.3);
+    }
+
+    .clear-laps-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 0.8rem;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .menu-btn {
+        display: block;
+      }
+      
+      .sidebar {
+        left: -100%;
+        width: 80%;
+        max-width: 280px;
+      }
+      
+      .sidebar.active {
+        left: 0;
+      }
+      
+      .main-content {
+        margin-left: 0 !important;
+        padding: 80px 15px 20px;
+      }
+      
+      .time {
+        font-size: 2.2rem;
+      }
+      
+      button {
+        padding: 16px 20px;
+        min-width: 120px;
+        font-size: 1.1rem;
+      }
+      
+      .controls {
+        gap: 10px;
+      }
+      
+      input {
+        width: 65px;
+        padding: 14px 10px;
+        font-size: 1.1rem;
+      }
+      
+      .pip-container {
+        width: 320px;
+        top: 90px;
+        right: 10px;
+      }
+      
+      .pip-time {
+        font-size: 1.5rem;
+      }
+      
+      h1 {
+        font-size: 1.6rem;
+      }
+      
+      h2 {
+        font-size: 1.4rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .time {
+        font-size: 2rem;
+      }
+      
+      button {
+        padding: 14px 18px;
+        min-width: 110px;
+        font-size: 1rem;
+      }
+      
+      input {
+        width: 60px;
+        padding: 12px 8px;
+      }
+      
+      .pip-container {
+        width: 300px;
+      }
+      
+      .pip-time {
+        font-size: 1.4rem;
+      }
+      
+      .pip-inputs input {
+        width: 50px;
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Animation for PiP mode */
+    @keyframes pipEnter {
+      from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .pip-container.show {
+      display: flex;
+      animation: pipEnter 0.4s ease-out;
+    }
+    
+    .pip-timer-section {
+      width: 100%;
+      margin-bottom: 18px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .pip-timer-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    
+    .pip-section-title {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      opacity: 0.9;
+      font-weight: 600;
+    }
+  </style>
 </head>
+
 <body>
+  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
 
-<button class="menu-btn" onclick="toggleSidebar()">☰</button>
-
-<div class="sidebar" id="sidebar">
-  <h2>Time Tools</h2>
-  <div class="sidebar-nav">
-    <a href="#home" class="active" onclick="closeSidebar()">Home</a>
-    <a href="#timer-tools" onclick="closeSidebar()">Timer Tools</a>
-    <a href="#how-to-use" onclick="closeSidebar()">How to Use</a>
-    <a href="#blog" onclick="closeSidebar()">Blog</a>
-    <a href="#privacy-policy" onclick="closeSidebar()">Privacy Policy</a>
+  <div class="sidebar" id="sidebar">
+    <h2>Time Tools</h2>
+    <div class="sidebar-nav">
+      <a href="#home" class="active" onclick="handleNavClick(this)">Home</a>
+      <a href="#timer-tools" onclick="handleNavClick(this)">Timer Tools</a>
+      <a href="#how-to-use" onclick="handleNavClick(this)">How to Use</a>
+      <a href="#blog" onclick="handleNavClick(this)">Blog</a>
+      <a href="#privacy-policy" onclick="handleNavClick(this)">Privacy Policy</a>
+    </div>
   </div>
-</div>
 
-<div class="main-content">
-  <section id="home">
-    <h1>Online Stopwatch & Countdown Timer</h1>
-    <p>Track time with precision — free, fast, and secure from CalandTime Solutions.</p>
-    <p>Today's date: <span id="current-date"></span></p>
-  </section>
+  <div class="main-content" id="mainContent">
+    <section id="home">
+      <div class="header-actions">
+        <button class="pip-toggle" onclick="togglePipMode()">Enter PiP Mode</button>
+        <small>Keep timers visible while working on other tasks - All functionality available in PiP!</small>
+      </div>
+      <h1>Online Stopwatch & Countdown Timer</h1>
+      <p>Track time with precision — free, fast, and secure from CalandTime Solutions.</p>
+      <p>Today's date: <span id="current-date"></span></p>
+    </section>
 
-  <section id="timer-tools">
-    <h2>Timer Tools</h2>
-    <div class="container">
-      <h3>Stopwatch</h3>
-      <div id="stopwatch" class="time">00:00:00.00</div>
-      <button id="stopwatchToggle" onclick="toggleStopwatch()">Start</button>
-      <button onclick="recordLap()">Lap</button>
-      <button onclick="resetStopwatch()">Reset</button>
-      <div id="laps" class="laps-list"></div>
-      <button id="clearLapsBtn" onclick="clearLaps()" style="display:none;">Clear Laps</button>
+    <section id="timer-tools">
+      <h2>Timer Tools</h2>
+      <div class="container">
+        <h3>Stopwatch</h3>
+        <div id="stopwatch" class="time">00:00:00.00</div>
+        <div class="controls">
+          <button id="stopwatchToggle" onclick="toggleStopwatch()">Start</button>
+          <button onclick="recordLap()">Lap</button>
+          <button onclick="resetStopwatch()" class="secondary">Reset</button>
+        </div>
+        <div id="laps" class="laps-list"></div>
+        <button id="clearLapsBtn" onclick="clearLaps()" style="display:none;" class="secondary clear-laps-btn">Clear Laps</button>
+      </div>
+
+      <div class="container">
+        <h3>Countdown Timer</h3>
+        <div>
+          <input id="days" type="number" placeholder="Days" min="0" />
+          <input id="hours" type="number" placeholder="Hours" min="0" max="23" />
+          <input id="minutes" type="number" placeholder="Minutes" min="0" max="59" />
+          <input id="seconds" type="number" placeholder="Seconds" min="0" max="59" />
+        </div>
+        <div id="countdown" class="time">00:00:00:00</div>
+        <div class="controls">
+          <button onclick="startCountdown()" class="success">Start</button>
+          <button onclick="stopCountdown()" class="secondary">Pause</button>
+          <button onclick="resetCountdown()" class="secondary">Reset</button>
+        </div>
+        <p id="countdownMessage" style="display:none; color:green; font-weight:bold;">🎉 Time's up!</p>
+      </div>
+    </section>
+
+    <section id="how-to-use">
+      <h2>How to Use</h2>
+      <p>Start the stopwatch to measure elapsed time or use the countdown timer to set intervals and reminders.</p>
+      <p><strong>Picture-in-Picture Mode:</strong> Click the "Enter PiP Mode" button to keep both timers visible in a small floating window while you work on other applications. You can operate both timers directly from the PiP window without returning to the main screen - all functionality is available!</p>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="blog-post">
+        <h3>Top 5 Productivity Hacks Using a Timer</h3>
+        <p>Learn how to use time tracking tools to boost efficiency and focus.</p>
+      </div>
+      <div class="blog-post">
+        <h3>How to Use the Countdown Timer for Fitness</h3>
+        <p>Perfect for interval training and focused workout sessions.</p>
+      </div>
+    </section>
+
+    <section id="privacy-policy">
+      <h2>Privacy Policy</h2>
+      <p>This website does not collect or store personal data. Stopwatch and countdown data remain stored locally in your browser.</p>
+    </section>
+  </div>
+
+  <!-- Picture-in-Picture Container -->
+  <div class="pip-container" id="pipContainer">
+    <div class="pip-header">
+      <div class="pip-title">CalandTime Timer</div>
+      <button class="pip-close" onclick="closePipWindow()">×</button>
     </div>
-
-    <div class="container">
-      <h3>Countdown Timer</h3>
-      <input id="days" type="number" placeholder="Days" min="0">
-      <input id="hours" type="number" placeholder="Hours" min="0" max="23">
-      <input id="minutes" type="number" placeholder="Minutes" min="0" max="59">
-      <input id="seconds" type="number" placeholder="Seconds" min="0" max="59">
-      <div id="countdown" class="time">00:00:00:00</div>
-      <button onclick="startCountdown()">Start</button>
-      <button onclick="stopCountdown()">Pause</button>
-      <button onclick="resetCountdown()">Reset</button>
-      <p id="countdownMessage" style="display:none;color:green;font-weight:bold;">🎉 Time’s up!</p>
+    
+    <div class="pip-timer-section">
+      <div class="pip-section-title">Stopwatch</div>
+      <div id="pipStopwatch" class="pip-time">00:00:00.00</div>
+      <div class="pip-controls">
+        <button id="pipStopwatchToggle" onclick="pipToggleStopwatch()">Start</button>
+        <button onclick="pipRecordLap()">Lap</button>
+        <button onclick="pipResetStopwatch()" class="secondary">Reset</button>
+      </div>
+      <div class="pip-laps-section">
+        <div id="pipLaps" class="pip-laps-list"></div>
+      </div>
+      <div class="pip-controls">
+        <button onclick="pipClearLaps()" id="pipClearLapsBtn" style="display:none;" class="warning clear-laps-btn">Clear Laps</button>
+      </div>
     </div>
-  </section>
-
-  <section id="how-to-use">
-    <h2>How to Use</h2>
-    <p>Start the stopwatch to measure elapsed time or use the countdown timer to set intervals and reminders.</p>
-  </section>
-
-  <section id="blog">
-    <h2>Blog</h2>
-    <div class="blog-post">
-      <h3>Top 5 Productivity Hacks Using a Timer</h3>
-      <p>Learn how to use time tracking tools to boost efficiency and focus.</p>
+    
+    <div class="pip-timer-section">
+      <div class="pip-section-title">Countdown Timer</div>
+      <div class="pip-inputs">
+        <input id="pipDays" type="number" placeholder="D" min="0" value="0" />
+        <input id="pipHours" type="number" placeholder="H" min="0" max="23" value="0" />
+        <input id="pipMinutes" type="number" placeholder="M" min="0" max="59" value="0" />
+        <input id="pipSeconds" type="number" placeholder="S" min="0" max="59" value="0" />
+      </div>
+      <div id="pipCountdown" class="pip-time">00:00:00:00</div>
+      <div class="pip-controls">
+        <button id="pipCountdownToggle" onclick="pipStartCountdown()">Start</button>
+        <button onclick="pipStopCountdown()" class="secondary">Pause</button>
+        <button onclick="pipResetCountdown()" class="secondary">Reset</button>
+      </div>
+      <div id="pipCountdownMessage" class="pip-countdown-message">🎉 Time's up!</div>
     </div>
-    <div class="blog-post">
-      <h3>How to Use the Countdown Timer for Fitness</h3>
-      <p>Perfect for interval training and focused workout sessions.</p>
-    </div>
-  </section>
+  </div>
 
-  <section id="privacy-policy">
-    <h2>Privacy Policy</h2>
-    <p>This website does not collect or store personal data. Stopwatch and countdown data remain stored locally in your browser.</p>
-  </section>
-</div>
+  <script>
+    // Set today's date
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString();
 
-<script>
-  // Date in DD/MM/YYYY format
-  const today = new Date();
-  const dd = String(today.getDate()).padStart(2, '0');
-  const mm = String(today.getMonth() + 1).padStart(2, '0'); // months are 0-indexed
-  const yyyy = today.getFullYear();
-  document.getElementById('current-date').textContent = `${dd}/${mm}/${yyyy}`;
+    // Sidebar toggle and navigation
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const mainContent = document.getElementById('mainContent');
+      sidebar.classList.toggle('active');
+      if (sidebar.classList.contains('active')) {
+        mainContent.style.marginLeft = '220px';
+      } else {
+        mainContent.style.marginLeft = '0';
+      }
+    }
 
-  function toggleSidebar(){document.getElementById('sidebar').classList.toggle('active');}
-  function closeSidebar(){document.getElementById('sidebar').classList.remove('active');}
+    // Handle navigation clicks - hide sidebar on mobile after selection
+    function handleNavClick(clickedElement) {
+      // Update active state
+      document.querySelectorAll('.sidebar-nav a').forEach(link => {
+        link.classList.remove('active');
+      });
+      clickedElement.classList.add('active');
+      
+      // Hide sidebar on mobile after selection
+      if (window.innerWidth <= 768) {
+        toggleSidebar();
+      }
+    }
 
-  /* Stopwatch */
-  let stopwatchInterval, stopwatchTime=0, stopwatchRunning=false, laps=[];
-  function formatTime(ms){let h=Math.floor(ms/3600000), m=Math.floor((ms%3600000)/60000), s=Math.floor((ms%60000)/1000), msPart=Math.floor((ms%1000)/10); return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}.${String(msPart).padStart(2,'0')}`;}
-  function updateStopwatchDisplay(){document.getElementById("stopwatch").innerText=formatTime(stopwatchTime);}
-  function toggleStopwatch(){if(stopwatchRunning){clearInterval(stopwatchInterval); stopwatchRunning=false; document.getElementById("stopwatchToggle").innerText="Resume";} else {let lastTime=Date.now(); stopwatchInterval=setInterval(()=>{let now=Date.now(); stopwatchTime+=now-lastTime; lastTime=now; updateStopwatchDisplay();},10); stopwatchRunning=true; document.getElementById("stopwatchToggle").innerText="Pause";}}
-  function resetStopwatch(){clearInterval(stopwatchInterval); stopwatchTime=0; stopwatchRunning=false; updateStopwatchDisplay(); document.getElementById("stopwatchToggle").innerText="Start";}
-  function recordLap(){if(stopwatchTime===0)return; laps.push(formatTime(stopwatchTime)); updateLapDisplay();}
-  function updateLapDisplay(){const lapContainer=document.getElementById("laps"), clearBtn=document.getElementById("clearLapsBtn"); lapContainer.innerHTML=""; if(laps.length===0){clearBtn.style.display="none"; return;} clearBtn.style.display="inline-block"; laps.slice().reverse().forEach((lap,i)=>{const div=document.createElement("div"); div.textContent=`Lap ${laps.length-i}: ${lap}`; lapContainer.appendChild(div);});}
-  function clearLaps(){laps=[]; updateLapDisplay();}
+    // Stopwatch logic
+    let stopwatchInterval, stopwatchTime = 0, stopwatchRunning = false;
+    let laps = [];
 
-  /* Countdown */
-  let countdownInterval, countdownTime=0, countdownRunning=false;
-  function playBuzzer(){const ctx=new(window.AudioContext||window.webkitAudioContext)(),osc=ctx.createOscillator(),gain=ctx.createGain(); osc.connect(gain); gain.connect(ctx.destination); osc.type="square"; osc.frequency.value=800; gain.gain.setValueAtTime(0.2,ctx.currentTime); osc.start(); osc.stop(ctx.currentTime+0.5);}
-  function updateCountdownDisplay(){let d=Math.floor(countdownTime/86400),h=Math.floor((countdownTime%86400)/3600),m=Math.floor((countdownTime%3600)/60),s=countdownTime%60; document.getElementById("countdown").innerText=`${String(d).padStart(2,'0')}:${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;}
-  function startCountdown(){if(countdownRunning) return; const d=parseInt(document.getElementById("days").value)||0,h=parseInt(document.getElementById("hours").value)||0,m=parseInt(document.getElementById("minutes").value)||0,s=parseInt(document.getElementById("seconds").value)||0; if(d===0&&h===0&&m===0&&s===0&&countdownTime===0) return; if(countdownTime===0) countdownTime=d*86400+h*3600+m*60+s; document.getElementById("countdownMessage").style.display="none"; countdownRunning=true; countdownInterval=setInterval(()=>{if(countdownTime<=0){countdownTime=0; updateCountdownDisplay(); clearInterval(countdownInterval); countdownRunning=false; playBuzzer(); document.getElementById("countdownMessage").style.display="block"; return;} countdownTime--; updateCountdownDisplay();},1000);}
-  function stopCountdown(){clearInterval(countdownInterval); countdownRunning=false;}
-  function resetCountdown(){stopCountdown(); countdownTime=0; updateCountdownDisplay(); document.getElementById("countdownMessage").style.display="none";}
-</script>
+    function formatTime(ms) {
+      let h = Math.floor(ms / 3600000);
+      let m = Math.floor((ms % 3600000) / 60000);
+      let s = Math.floor((ms % 60000) / 1000);
+      let msPart = Math.floor((ms % 1000) / 10);
+      return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}.${String(msPart).padStart(2,'0')}`;
+    }
+
+    function updateStopwatchDisplay() {
+      document.getElementById("stopwatch").innerText = formatTime(stopwatchTime);
+      // Also update PiP display if active
+      if (pipModeActive) {
+        document.getElementById("pipStopwatch").innerText = formatTime(stopwatchTime);
+      }
+    }
+
+    function toggleStopwatch() {
+      if (stopwatchRunning) {
+        clearInterval(stopwatchInterval);
+        stopwatchRunning = false;
+        document.getElementById("stopwatchToggle").innerText = "Resume";
+        if (pipModeActive) {
+          document.getElementById("pipStopwatchToggle").innerText = "Resume";
+        }
+      } else {
+        let lastTime = Date.now();
+        stopwatchInterval = setInterval(() => {
+          const now = Date.now();
+          stopwatchTime += now - lastTime;
+          lastTime = now;
+          updateStopwatchDisplay();
+        }, 10);
+        stopwatchRunning = true;
+        document.getElementById("stopwatchToggle").innerText = "Pause";
+        if (pipModeActive) {
+          document.getElementById("pipStopwatchToggle").innerText = "Pause";
+        }
+      }
+    }
+
+    function resetStopwatch() {
+      clearInterval(stopwatchInterval);
+      stopwatchTime = 0;
+      stopwatchRunning = false;
+      updateStopwatchDisplay();
+      document.getElementById("stopwatchToggle").innerText = "Start";
+      if (pipModeActive) {
+        document.getElementById("pipStopwatchToggle").innerText = "Start";
+      }
+    }
+
+    function recordLap() {
+      if (stopwatchTime === 0) return;
+      const lapTime = formatTime(stopwatchTime);
+      laps.push(lapTime);
+      updateLapDisplay();
+    }
+
+    function updateLapDisplay() {
+      const lapContainer = document.getElementById("laps");
+      const pipLapContainer = document.getElementById("pipLaps");
+      const clearBtn = document.getElementById("clearLapsBtn");
+      const pipClearBtn = document.getElementById("pipClearLapsBtn");
+      
+      lapContainer.innerHTML = "";
+      if (pipLapContainer) pipLapContainer.innerHTML = "";
+      
+      if (laps.length === 0) {
+        clearBtn.style.display = "none";
+        if (pipClearBtn) pipClearBtn.style.display = "none";
+        return;
+      }
+      clearBtn.style.display = "inline-block";
+      if (pipClearBtn) pipClearBtn.style.display = "inline-block";
+      
+      laps.slice().reverse().forEach((lap, i) => {
+        const div = document.createElement("div");
+        div.textContent = `Lap ${laps.length - i}: ${lap}`;
+        lapContainer.appendChild(div);
+        
+        // Also update PiP laps if active
+        if (pipModeActive && pipLapContainer) {
+          const pipDiv = document.createElement("div");
+          pipDiv.textContent = `Lap ${laps.length - i}: ${lap}`;
+          pipLapContainer.appendChild(pipDiv);
+        }
+      });
+    }
+
+    function clearLaps() {
+      laps = [];
+      updateLapDisplay();
+    }
+
+    // Countdown logic
+    let countdownInterval, countdownTime = 0, countdownRunning = false;
+
+    function playBuzzer() {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.type = "square";
+      osc.frequency.value = 800;
+      gain.gain.setValueAtTime(0.2, ctx.currentTime);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.5);
+    }
+
+    function updateCountdownDisplay() {
+      let d = Math.floor(countdownTime / 86400);
+      let h = Math.floor((countdownTime % 86400) / 3600);
+      let m = Math.floor((countdownTime % 3600) / 60);
+      let s = countdownTime % 60;
+      const displayText = `${String(d).padStart(2,'0')}:${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+      document.getElementById("countdown").innerText = displayText;
+      
+      // Also update PiP display if active
+      if (pipModeActive) {
+        document.getElementById("pipCountdown").innerText = displayText;
+      }
+    }
+
+    function startCountdown() {
+      if (countdownRunning) return;
+      const d = parseInt(document.getElementById("days").value) || 0;
+      const h = parseInt(document.getElementById("hours").value) || 0;
+      const m = parseInt(document.getElementById("minutes").value) || 0;
+      const s = parseInt(document.getElementById("seconds").value) || 0;
+      if (d === 0 && h === 0 && m === 0 && s === 0 && countdownTime === 0) return;
+      if (countdownTime === 0) countdownTime = d * 86400 + h * 3600 + m * 60 + s;
+      document.getElementById("countdownMessage").style.display = "none";
+      countdownRunning = true;
+      document.getElementById("pipCountdownToggle").innerText = "Pause";
+      countdownInterval = setInterval(() => {
+        if (countdownTime <= 0) {
+          countdownTime = 0;
+          updateCountdownDisplay();
+          clearInterval(countdownInterval);
+          countdownRunning = false;
+          document.getElementById("pipCountdownToggle").innerText = "Start";
+          playBuzzer();
+          document.getElementById("countdownMessage").style.display = "block";
+          if (pipModeActive) {
+            document.getElementById("pipCountdownMessage").style.display = "block";
+          }
+          return;
+        }
+        countdownTime--;
+        updateCountdownDisplay();
+      }, 1000);
+    }
+
+    function stopCountdown() {
+      clearInterval(countdownInterval);
+      countdownRunning = false;
+      document.getElementById("pipCountdownToggle").innerText = "Resume";
+    }
+
+    function resetCountdown() {
+      stopCountdown();
+      countdownTime = 0;
+      updateCountdownDisplay();
+      document.getElementById("countdownMessage").style.display = "none";
+      document.getElementById("pipCountdownToggle").innerText = "Start";
+      if (pipModeActive) {
+        document.getElementById("pipCountdownMessage").style.display = "none";
+      }
+    }
+
+    // Picture-in-Picture functionality
+    let pipModeActive = false;
+    let isDragging = false;
+    let dragOffset = { x: 0, y: 0 };
+
+    function togglePipMode() {
+      const pipContainer = document.getElementById("pipContainer");
+      
+      if (pipModeActive) {
+        closePipWindow();
+      } else {
+        // Enter PiP mode
+        pipContainer.classList.add("show");
+        pipModeActive = true;
+        document.querySelector(".pip-toggle").textContent = "Exit PiP Mode";
+        
+        // Update PiP displays with current times
+        document.getElementById("pipStopwatch").innerText = formatTime(stopwatchTime);
+        updateCountdownDisplay();
+        updateLapDisplay();
+        
+        // Update PiP button text to match current state
+        document.getElementById("pipStopwatchToggle").textContent = 
+          stopwatchRunning ? "Pause" : "Start";
+          
+        document.getElementById("pipCountdownToggle").textContent = 
+          countdownRunning ? "Pause" : "Start";
+          
+        // Hide countdown message initially
+        document.getElementById("pipCountdownMessage").style.display = "none";
+      }
+    }
+
+    // Fixed close function for the cross button
+    function closePipWindow() {
+      const pipContainer = document.getElementById("pipContainer");
+      pipContainer.classList.remove("show");
+      pipModeActive = false;
+      document.querySelector(".pip-toggle").textContent = "Enter PiP Mode";
+    }
+
+    // Draggable PiP window functionality
+    function makePipDraggable() {
+      const pipContainer = document.getElementById("pipContainer");
+      
+      pipContainer.addEventListener('mousedown', startDrag);
+      pipContainer.addEventListener('touchstart', startDrag);
+      
+      function startDrag(e) {
+        // Don't start drag if clicking the close button
+        if (e.target.classList.contains('pip-close')) {
+          return;
+        }
+        
+        isDragging = true;
+        pipContainer.classList.add('dragging');
+        
+        const rect = pipContainer.getBoundingClientRect();
+        if (e.type === 'mousedown') {
+          dragOffset.x = e.clientX - rect.left;
+          dragOffset.y = e.clientY - rect.top;
+          document.addEventListener('mousemove', onDrag);
+          document.addEventListener('mouseup', stopDrag);
+        } else {
+          dragOffset.x = e.touches[0].clientX - rect.left;
+          dragOffset.y = e.touches[0].clientY - rect.top;
+          document.addEventListener('touchmove', onDrag);
+          document.addEventListener('touchend', stopDrag);
+        }
+        
+        e.preventDefault();
+      }
+      
+      function onDrag(e) {
+        if (!isDragging) return;
+        
+        let clientX, clientY;
+        if (e.type === 'mousemove') {
+          clientX = e.clientX;
+          clientY = e.clientY;
+        } else {
+          clientX = e.touches[0].clientX;
+          clientY = e.touches[0].clientY;
+        }
+        
+        // Calculate new position
+        const newX = clientX - dragOffset.x;
+        const newY = clientY - dragOffset.y;
+        
+        // Apply boundaries to keep window within viewport
+        const maxX = window.innerWidth - pipContainer.offsetWidth;
+        const maxY = window.innerHeight - pipContainer.offsetHeight;
+        
+        pipContainer.style.left = Math.max(0, Math.min(newX, maxX)) + 'px';
+        pipContainer.style.top = Math.max(0, Math.min(newY, maxY)) + 'px';
+        pipContainer.style.right = 'auto';
+      }
+      
+      function stopDrag() {
+        isDragging = false;
+        pipContainer.classList.remove('dragging');
+        document.removeEventListener('mousemove', onDrag);
+        document.removeEventListener('mouseup', stopDrag);
+        document.removeEventListener('touchmove', onDrag);
+        document.removeEventListener('touchend', stopDrag);
+      }
+    }
+
+    // Initialize draggable functionality
+    makePipDraggable();
+
+    // PiP control functions - Completely independent from main screen
+    function pipToggleStopwatch() {
+      if (stopwatchRunning) {
+        clearInterval(stopwatchInterval);
+        stopwatchRunning = false;
+        document.getElementById("pipStopwatchToggle").innerText = "Resume";
+        document.getElementById("stopwatchToggle").innerText = "Resume";
+      } else {
+        let lastTime = Date.now();
+        stopwatchInterval = setInterval(() => {
+          const now = Date.now();
+          stopwatchTime += now - lastTime;
+          lastTime = now;
+          updateStopwatchDisplay();
+        }, 10);
+        stopwatchRunning = true;
+        document.getElementById("pipStopwatchToggle").innerText = "Pause";
+        document.getElementById("stopwatchToggle").innerText = "Pause";
+      }
+    }
+
+    function pipRecordLap() {
+      if (stopwatchTime === 0) return;
+      const lapTime = formatTime(stopwatchTime);
+      laps.push(lapTime);
+      updateLapDisplay();
+    }
+
+    function pipResetStopwatch() {
+      clearInterval(stopwatchInterval);
+      stopwatchTime = 0;
+      stopwatchRunning = false;
+      updateStopwatchDisplay();
+      document.getElementById("pipStopwatchToggle").innerText = "Start";
+      document.getElementById("stopwatchToggle").innerText = "Start";
+    }
+    
+    function pipClearLaps() {
+      laps = [];
+      updateLapDisplay();
+    }
+    
+    function pipStartCountdown() {
+      if (countdownRunning) return;
+      const d = parseInt(document.getElementById("pipDays").value) || 0;
+      const h = parseInt(document.getElementById("pipHours").value) || 0;
+      const m = parseInt(document.getElementById("pipMinutes").value) || 0;
+      const s = parseInt(document.getElementById("pipSeconds").value) || 0;
+      if (d === 0 && h === 0 && m === 0 && s === 0 && countdownTime === 0) {
+        alert("Please set a countdown time first!");
+        return;
+      }
+      if (countdownTime === 0) countdownTime = d * 86400 + h * 3600 + m * 60 + s;
+      document.getElementById("countdownMessage").style.display = "none";
+      document.getElementById("pipCountdownMessage").style.display = "none";
+      countdownRunning = true;
+      document.getElementById("pipCountdownToggle").innerText = "Pause";
+      countdownInterval = setInterval(() => {
+        if (countdownTime <= 0) {
+          countdownTime = 0;
+          updateCountdownDisplay();
+          clearInterval(countdownInterval);
+          countdownRunning = false;
+          document.getElementById("pipCountdownToggle").innerText = "Start";
+          playBuzzer();
+          document.getElementById("countdownMessage").style.display = "block";
+          document.getElementById("pipCountdownMessage").style.display = "block";
+          return;
+        }
+        countdownTime--;
+        updateCountdownDisplay();
+      }, 1000);
+    }
+    
+    function pipStopCountdown() {
+      clearInterval(countdownInterval);
+      countdownRunning = false;
+      document.getElementById("pipCountdownToggle").innerText = "Resume";
+    }
+    
+    function pipResetCountdown() {
+      stopCountdown();
+      countdownTime = 0;
+      updateCountdownDisplay();
+      document.getElementById("countdownMessage").style.display = "none";
+      document.getElementById("pipCountdownToggle").innerText = "Start";
+      document.getElementById("pipCountdownMessage").style.display = "none";
+    }
+
+    // Close PiP when clicking outside (on mobile)
+    document.addEventListener('click', function(event) {
+      const pipContainer = document.getElementById("pipContainer");
+      const pipToggle = document.querySelector(".pip-toggle");
+      
+      if (pipModeActive && 
+          !pipContainer.contains(event.target) && 
+          event.target !== pipToggle && 
+          !pipToggle.contains(event.target)) {
+        closePipWindow();
+      }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+        sidebar.classList.remove('active');
+        mainContent.style.marginLeft = '220px';
+      } else {
+        const mainContent = document.getElementById('mainContent');
+        mainContent.style.marginLeft = '0';
+      }
+    });
+  </script>
 </body>
 </html>
-
-
-
