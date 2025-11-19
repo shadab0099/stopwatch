@@ -3,29 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Comprehensive Favicon Setup -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <!-- SEO & Sitemap -->
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap">
+  <link rel="canonical" href="https://stopwatch.calandtimesolutions.com/" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  
+  <!-- Updated Title & Meta -->
   <title>PULSE - Online Stopwatch & Countdown Timer</title>
   <meta name="description" content="PULSE: Free online stopwatch and countdown timer. Track time instantly, set intervals, and boost productivity — no download or signup required.">
 
-  <!-- WebApplication Schema -->
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="PULSE - Free Online Stopwatch & Countdown Timer">
+  <meta property="og:description" content="Track time with precision — free, fast, and secure with PULSE.">
+  <meta property="og:image" content="https://stopwatch.calandtimesolutions.com/favicon-32x32.png">
+  <meta property="og:url" content="https://stopwatch.calandtimesolutions.com/">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Updated WebApplication Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "PULSE - Online Stopwatch & Countdown Timer",
-    "url": "https://pulse-timer.com/",
-    "image": "https://pulse-timer.com/favicon.ico",
+    "url": "https://stopwatch.calandtimesolutions.com/",
+    "image": "https://stopwatch.calandtimesolutions.com/favicon.ico",
     "author": {
       "@type": "Organization",
       "name": "PULSE",
-      "url": "https://pulse-timer.com/"
+      "url": "https://stopwatch.calandtimesolutions.com/"
     },
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "All",
     "description": "PULSE: Instant free online stopwatch and countdown timer. Start tracking time directly in your browser — no signup or download required.",
-    "softwareVersion": "1.0",
+    "softwareVersion": "2.0",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -44,7 +63,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "PULSE",
-      "url": "https://pulse-timer.com/"
+      "url": "https://stopwatch.calandtimesolutions.com/"
     }
   }
   </script>
@@ -59,19 +78,19 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://pulse-timer.com/"
+        "item": "https://stopwatch.calandtimesolutions.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Online Stopwatch",
-        "item": "https://pulse-timer.com/"
+        "item": "https://stopwatch.calandtimesolutions.com/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Timer Tools",
-        "item": "https://pulse-timer.com/#timer-tools"
+        "item": "https://stopwatch.calandtimesolutions.com/#timer-tools"
       }
     ]
   }
@@ -1353,6 +1372,12 @@
         mainContent.style.marginLeft = '0';
       }
     });
+
+    // Force Google to refetch favicon (temporary)
+    setTimeout(() => {
+      fetch('https://www.google.com/s2/favicons?domain=stopwatch.calandtimesolutions.com')
+        .then(response => console.log('Favicon fetch triggered:', response.status));
+    }, 2000);
   </script>
 </body>
 </html>
