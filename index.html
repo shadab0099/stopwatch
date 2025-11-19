@@ -942,7 +942,7 @@
     </div>
   </div>
 
-  <script>
+ <script>
     // Set today's date
     document.getElementById('current-date').textContent = new Date().toLocaleDateString();
 
@@ -1070,7 +1070,7 @@
       updateLapDisplay();
     }
 
-    // Countdown logic
+    // Countdown logic - FIXED: Using same variables for both main and PiP
     let countdownInterval, countdownTime = 0, countdownRunning = false;
 
     function playBuzzer() {
@@ -1258,93 +1258,66 @@
     // Initialize draggable functionality
     makePipDraggable();
 
-    // PiP control functions - Completely independent from main screen
+    // PiP control functions - FIXED: Now properly connected to main timer
     function pipToggleStopwatch() {
-      if (stopwatchRunning) {
-        clearInterval(stopwatchInterval);
-        stopwatchRunning = false;
-        document.getElementById("pipStopwatchToggle").innerHTML = "<i>▶️</i> Resume";
-        document.getElementById("stopwatchToggle").innerHTML = "<i>▶️</i> Resume";
-      } else {
-        let lastTime = Date.now();
-        stopwatchInterval = setInterval(() => {
-          const now = Date.now();
-          stopwatchTime += now - lastTime;
-          lastTime = now;
-          updateStopwatchDisplay();
-        }, 10);
-        stopwatchRunning = true;
-        document.getElementById("pipStopwatchToggle").innerHTML = "<i>⏸️</i> Pause";
-        document.getElementById("stopwatchToggle").innerHTML = "<i>⏸️</i> Pause";
-      }
+      // Use the same toggleStopwatch function to maintain sync
+      toggleStopwatch();
     }
 
     function pipRecordLap() {
-      if (stopwatchTime === 0) return;
-      const lapTime = formatTime(stopwatchTime);
-      laps.push(lapTime);
-      updateLapDisplay();
+      // Use the same recordLap function to maintain sync
+      recordLap();
     }
 
     function pipResetStopwatch() {
-      clearInterval(stopwatchInterval);
-      stopwatchTime = 0;
-      stopwatchRunning = false;
-      updateStopwatchDisplay();
-      document.getElementById("pipStopwatchToggle").innerHTML = "<i>▶️</i> Start";
-      document.getElementById("stopwatchToggle").innerHTML = "<i>▶️</i> Start";
+      // Use the same resetStopwatch function to maintain sync
+      resetStopwatch();
     }
     
     function pipClearLaps() {
-      laps = [];
-      updateLapDisplay();
+      // Use the same clearLaps function to maintain sync
+      clearLaps();
     }
     
     function pipStartCountdown() {
       if (countdownRunning) return;
+      
+      // Get values from PiP inputs
       const d = parseInt(document.getElementById("pipDays").value) || 0;
       const h = parseInt(document.getElementById("pipHours").value) || 0;
       const m = parseInt(document.getElementById("pipMinutes").value) || 0;
       const s = parseInt(document.getElementById("pipSeconds").value) || 0;
+      
       if (d === 0 && h === 0 && m === 0 && s === 0 && countdownTime === 0) {
         alert("Please set a countdown time first!");
         return;
       }
+      
+      // Also update main inputs to keep them in sync
+      document.getElementById("days").value = d;
+      document.getElementById("hours").value = h;
+      document.getElementById("minutes").value = m;
+      document.getElementById("seconds").value = s;
+      
+      // Use the same startCountdown function to maintain sync
       if (countdownTime === 0) countdownTime = d * 86400 + h * 3600 + m * 60 + s;
-      document.getElementById("countdownMessage").style.display = "none";
-      document.getElementById("pipCountdownMessage").style.display = "none";
-      countdownRunning = true;
-      document.getElementById("pipCountdownToggle").innerHTML = "<i>⏸️</i> Pause";
-      countdownInterval = setInterval(() => {
-        if (countdownTime <= 0) {
-          countdownTime = 0;
-          updateCountdownDisplay();
-          clearInterval(countdownInterval);
-          countdownRunning = false;
-          document.getElementById("pipCountdownToggle").innerHTML = "<i>▶️</i> Start";
-          playBuzzer();
-          document.getElementById("countdownMessage").style.display = "block";
-          document.getElementById("pipCountdownMessage").style.display = "block";
-          return;
-        }
-        countdownTime--;
-        updateCountdownDisplay();
-      }, 1000);
+      startCountdown();
     }
     
     function pipStopCountdown() {
-      clearInterval(countdownInterval);
-      countdownRunning = false;
-      document.getElementById("pipCountdownToggle").innerHTML = "<i>▶️</i> Resume";
+      // Use the same stopCountdown function to maintain sync
+      stopCountdown();
     }
     
     function pipResetCountdown() {
-      stopCountdown();
-      countdownTime = 0;
-      updateCountdownDisplay();
-      document.getElementById("countdownMessage").style.display = "none";
-      document.getElementById("pipCountdownToggle").innerHTML = "<i>▶️</i> Start";
-      document.getElementById("pipCountdownMessage").style.display = "none";
+      // Use the same resetCountdown function to maintain sync
+      resetCountdown();
+      
+      // Also reset PiP inputs
+      document.getElementById("pipDays").value = 0;
+      document.getElementById("pipHours").value = 0;
+      document.getElementById("pipMinutes").value = 0;
+      document.getElementById("pipSeconds").value = 0;
     }
 
     // Close PiP when clicking outside (on mobile)
@@ -1378,6 +1351,7 @@
       fetch('https://www.google.com/s2/favicons?domain=stopwatch.calandtimesolutions.com')
         .then(response => console.log('Favicon fetch triggered:', response.status));
     }, 2000);
-  </script>
+</script>
 </body>
 </html>
+
