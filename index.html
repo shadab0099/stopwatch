@@ -138,6 +138,9 @@
   }
   </script>
 
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
   <style>
     :root {
       --primary-color: #e63946;
@@ -451,16 +454,17 @@
       transform: translateY(-2px);
     }
 
+    /* VERTICAL PiP CONTAINER - 25% SMALLER */
     .pip-container {
       position: fixed;
       top: 100px;
       right: 20px;
-      width: 380px;
+      width: 214px; /* Reduced by 25% */
       background: linear-gradient(135deg, var(--primary-color), #a4161a);
       color: white;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
       z-index: 1001;
       display: none;
       flex-direction: column;
@@ -473,7 +477,7 @@
 
     .pip-container.dragging {
       border-color: rgba(255,255,255,0.3);
-      box-shadow: 0 16px 50px rgba(0,0,0,0.4);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
       transform: scale(1.02);
     }
 
@@ -482,26 +486,26 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
       cursor: move;
-      padding-bottom: 12px;
+      padding-bottom: 6px;
       border-bottom: 1px solid rgba(255,255,255,0.2);
     }
 
     .pip-title {
-      font-size: 1.2rem;
+      font-size: 0.85rem;
       font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 4px;
     }
 
     .pip-time {
-      font-size: 2rem;
+      font-size: 1.2rem;
       font-weight: 800;
-      margin: 15px 0;
+      margin: 8px 0;
       font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', monospace;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       color: white;
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
       background: linear-gradient(135deg, #ffffff, #e0e0e0);
@@ -512,18 +516,18 @@
 
     .pip-controls {
       display: flex;
-      gap: 10px;
-      margin-top: 15px;
+      gap: 6px;
+      margin-top: 8px;
       flex-wrap: wrap;
       justify-content: center;
     }
 
     .pip-controls button {
-      padding: 12px 16px;
-      font-size: 0.9rem;
+      padding: 8px 10px;
+      font-size: 0.7rem;
       min-width: auto;
       cursor: pointer;
-      border-radius: 10px;
+      border-radius: 6px;
       font-weight: 600;
     }
 
@@ -531,18 +535,18 @@
       background: rgba(255,255,255,0.15);
       border: none;
       color: white;
-      font-size: 1.4rem;
+      font-size: 0.9rem;
       cursor: pointer;
       padding: 0;
       min-width: auto;
-      width: 34px;
-      height: 34px;
+      width: 22px;
+      height: 22px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
       transition: all 0.3s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
     }
 
     .pip-close:hover {
@@ -576,23 +580,23 @@
 
     .pip-laps-section {
       width: 100%;
-      margin-top: 15px;
-      max-height: 150px;
+      margin-top: 8px;
+      max-height: 90px;
       overflow-y: auto;
     }
 
     .pip-laps-list {
       background: rgba(255,255,255,0.08);
-      border-radius: 10px;
-      padding: 12px;
-      max-height: 130px;
+      border-radius: 6px;
+      padding: 8px;
+      max-height: 75px;
       overflow-y: auto;
-      font-size: 0.85rem;
+      font-size: 0.65rem;
       border: 1px solid rgba(255,255,255,0.1);
     }
 
     .pip-laps-list div {
-      padding: 8px;
+      padding: 4px;
       border-bottom: 1px solid rgba(255,255,255,0.15);
       font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
       font-weight: 500;
@@ -608,20 +612,20 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 8px;
-      margin: 15px 0;
+      gap: 4px;
+      margin: 8px 0;
     }
 
     .pip-inputs input {
-      width: 60px;
-      padding: 12px;
-      font-size: 1rem;
+      width: 35px;
+      padding: 6px;
+      font-size: 0.8rem;
       font-weight: 600;
-      margin: 2px;
+      margin: 1px;
       border: 2px solid rgba(255,255,255,0.2);
       background: rgba(255,255,255,0.1);
       color: white;
-      border-radius: 8px;
+      border-radius: 4px;
     }
 
     .pip-inputs input::placeholder {
@@ -631,26 +635,26 @@
     .pip-inputs input:focus {
       border-color: rgba(255,255,255,0.5);
       background: rgba(255,255,255,0.15);
-      box-shadow: 0 0 0 3px rgba(255,255,255,0.1);
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
     }
 
     .pip-countdown-message {
       display: none;
       color: #4ade80;
       font-weight: bold;
-      font-size: 1rem;
-      margin-top: 10px;
+      font-size: 0.7rem;
+      margin-top: 6px;
       text-align: center;
-      padding: 10px 14px;
+      padding: 6px 8px;
       background: rgba(74, 222, 128, 0.1);
-      border-radius: 10px;
+      border-radius: 6px;
       border: 1px solid rgba(74, 222, 128, 0.3);
     }
 
     .clear-laps-btn {
-      margin-top: 12px;
-      padding: 10px 18px;
-      font-size: 0.85rem;
+      margin-top: 6px;
+      padding: 6px 8px;
+      font-size: 0.65rem;
     }
 
     .blog-post {
@@ -671,6 +675,62 @@
 
     .blog-post p {
       color: var(--light-text);
+    }
+
+    /* AdSense Compatible Styles */
+    .ad-container {
+      margin: 25px 0;
+      padding: 15px;
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .ad-label {
+      font-size: 0.8rem;
+      color: var(--light-text);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .ad-slot {
+      width: 100%;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border: 1px dashed #e9ecef;
+    }
+
+    .ad-slot::before {
+      content: "Advertisement";
+      color: var(--light-text);
+      font-size: 0.9rem;
+    }
+
+    /* VERTICAL PiP LAYOUT */
+    .pip-timer-section {
+      width: 100%;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .pip-timer-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .pip-section-title {
+      font-size: 0.75rem;
+      margin-bottom: 6px;
+      opacity: 0.9;
+      font-weight: 600;
+      text-align: center;
     }
 
     /* Mobile styles */
@@ -715,13 +775,13 @@
       }
       
       .pip-container {
-        width: 340px;
-        top: 90px;
+        width: 190px; /* Adjusted for mobile */
+        top: 80px;
         right: 10px;
       }
       
       .pip-time {
-        font-size: 1.7rem;
+        font-size: 1rem;
       }
       
       h1 {
@@ -734,6 +794,11 @@
       
       h3 {
         font-size: 1.4rem;
+      }
+      
+      /* Mobile AdSense adjustments */
+      .ad-slot {
+        min-height: 100px;
       }
     }
 
@@ -754,17 +819,17 @@
       }
       
       .pip-container {
-        width: 320px;
+        width: 180px; /* Further reduced for mobile */
       }
       
       .pip-time {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
       }
       
       .pip-inputs input {
-        width: 55px;
-        padding: 10px;
-        font-size: 0.9rem;
+        width: 30px;
+        padding: 4px;
+        font-size: 0.7rem;
       }
     }
 
@@ -783,25 +848,6 @@
     .pip-container.show {
       display: flex;
       animation: pipEnter 0.4s ease-out;
-    }
-    
-    .pip-timer-section {
-      width: 100%;
-      margin-bottom: 20px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-    }
-    
-    .pip-timer-section:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-    }
-    
-    .pip-section-title {
-      font-size: 1rem;
-      margin-bottom: 10px;
-      opacity: 0.9;
-      font-weight: 600;
     }
 
     /* Pulse animation for the logo */
@@ -843,10 +889,27 @@
       <h1>PULSE - Stopwatch & Countdown Timer</h1>
       <p>Track time with precision — free, fast, and secure with PULSE.</p>
       <p>Today's date: <span id="current-date"></span></p>
+      
+      <!-- AdSense Slot -->
+      <div class="ad-container">
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-slot">
+          <!-- AdSense code will be inserted here -->
+        </div>
+      </div>
     </section>
 
     <section id="timer-tools">
       <h2>Timer Tools</h2>
+      
+      <!-- AdSense Slot -->
+      <div class="ad-container">
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-slot">
+          <!-- AdSense code will be inserted here -->
+        </div>
+      </div>
+      
       <div class="container">
         <h3>Stopwatch</h3>
         <div id="stopwatch" class="time">00:00:00.00</div>
@@ -893,6 +956,14 @@
         <h3>How to Use the Countdown Timer for Fitness</h3>
         <p>Perfect for interval training and focused workout sessions.</p>
       </div>
+      
+      <!-- AdSense Slot -->
+      <div class="ad-container">
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-slot">
+          <!-- AdSense code will be inserted here -->
+        </div>
+      </div>
     </section>
 
     <section id="privacy-policy">
@@ -927,10 +998,10 @@
     <div class="pip-timer-section">
       <div class="pip-section-title">Countdown Timer</div>
       <div class="pip-inputs">
-        <input id="pipDays" type="number" placeholder="D" min="0" value="0" />
-        <input id="pipHours" type="number" placeholder="H" min="0" max="23" value="0" />
-        <input id="pipMinutes" type="number" placeholder="M" min="0" max="59" value="0" />
-        <input id="pipSeconds" type="number" placeholder="S" min="0" max="59" value="0" />
+        <input id="pipDays" type="number" placeholder="D" min="0" />
+        <input id="pipHours" type="number" placeholder="H" min="0" max="23" />
+        <input id="pipMinutes" type="number" placeholder="M" min="0" max="59" />
+        <input id="pipSeconds" type="number" placeholder="S" min="0" max="59" />
       </div>
       <div id="pipCountdown" class="pip-time">00:00:00:00</div>
       <div class="pip-controls">
@@ -942,7 +1013,7 @@
     </div>
   </div>
 
- <script>
+  <script>
     // Set today's date
     document.getElementById('current-date').textContent = new Date().toLocaleDateString();
 
@@ -996,9 +1067,9 @@
       if (stopwatchRunning) {
         clearInterval(stopwatchInterval);
         stopwatchRunning = false;
-        document.getElementById("stopwatchToggle").innerText = "Resume";
+        document.getElementById("stopwatchToggle").innerHTML = "<i>▶️</i> Resume";
         if (pipModeActive) {
-          document.getElementById("pipStopwatchToggle").innerText = "Resume";
+          document.getElementById("pipStopwatchToggle").innerHTML = "<i>▶️</i> Resume";
         }
       } else {
         let lastTime = Date.now();
@@ -1009,9 +1080,9 @@
           updateStopwatchDisplay();
         }, 10);
         stopwatchRunning = true;
-        document.getElementById("stopwatchToggle").innerText = "Pause";
+        document.getElementById("stopwatchToggle").innerHTML = "<i>⏸️</i> Pause";
         if (pipModeActive) {
-          document.getElementById("pipStopwatchToggle").innerText = "Pause";
+          document.getElementById("pipStopwatchToggle").innerHTML = "<i>⏸️</i> Pause";
         }
       }
     }
@@ -1021,9 +1092,9 @@
       stopwatchTime = 0;
       stopwatchRunning = false;
       updateStopwatchDisplay();
-      document.getElementById("stopwatchToggle").innerText = "Start";
+      document.getElementById("stopwatchToggle").innerHTML = "<i>▶️</i> Start";
       if (pipModeActive) {
-        document.getElementById("pipStopwatchToggle").innerText = "Start";
+        document.getElementById("pipStopwatchToggle").innerHTML = "<i>▶️</i> Start";
       }
     }
 
@@ -1102,27 +1173,38 @@
 
     function startCountdown() {
       if (countdownRunning) return;
+      
+      // Get values from main inputs
       const d = parseInt(document.getElementById("days").value) || 0;
       const h = parseInt(document.getElementById("hours").value) || 0;
       const m = parseInt(document.getElementById("minutes").value) || 0;
       const s = parseInt(document.getElementById("seconds").value) || 0;
-      if (d === 0 && h === 0 && m === 0 && s === 0 && countdownTime === 0) return;
-      if (countdownTime === 0) countdownTime = d * 86400 + h * 3600 + m * 60 + s;
+      
+      if (d === 0 && h === 0 && m === 0 && s === 0 && countdownTime === 0) {
+        alert("Please set a countdown time first!");
+        return;
+      }
+      
+      // Set the countdown time from inputs
+      if (countdownTime === 0) {
+        countdownTime = d * 86400 + h * 3600 + m * 60 + s;
+      }
+      
       document.getElementById("countdownMessage").style.display = "none";
+      document.getElementById("pipCountdownMessage").style.display = "none";
       countdownRunning = true;
-      document.getElementById("pipCountdownToggle").innerText = "Pause";
+      document.getElementById("pipCountdownToggle").innerHTML = "<i>⏸️</i> Pause";
+      
       countdownInterval = setInterval(() => {
         if (countdownTime <= 0) {
           countdownTime = 0;
           updateCountdownDisplay();
           clearInterval(countdownInterval);
           countdownRunning = false;
-          document.getElementById("pipCountdownToggle").innerText = "Start";
+          document.getElementById("pipCountdownToggle").innerHTML = "<i>▶️</i> Start";
           playBuzzer();
           document.getElementById("countdownMessage").style.display = "block";
-          if (pipModeActive) {
-            document.getElementById("pipCountdownMessage").style.display = "block";
-          }
+          document.getElementById("pipCountdownMessage").style.display = "block";
           return;
         }
         countdownTime--;
@@ -1133,7 +1215,7 @@
     function stopCountdown() {
       clearInterval(countdownInterval);
       countdownRunning = false;
-      document.getElementById("pipCountdownToggle").innerText = "Resume";
+      document.getElementById("pipCountdownToggle").innerHTML = "<i>▶️</i> Resume";
     }
 
     function resetCountdown() {
@@ -1141,7 +1223,7 @@
       countdownTime = 0;
       updateCountdownDisplay();
       document.getElementById("countdownMessage").style.display = "none";
-      document.getElementById("pipCountdownToggle").innerText = "Start";
+      document.getElementById("pipCountdownToggle").innerHTML = "<i>▶️</i> Start";
       if (pipModeActive) {
         document.getElementById("pipCountdownMessage").style.display = "none";
       }
@@ -1177,6 +1259,9 @@
           
         // Hide countdown message initially
         document.getElementById("pipCountdownMessage").style.display = "none";
+        
+        // Sync PiP inputs with main inputs
+        syncPipInputs();
       }
     }
 
@@ -1186,6 +1271,14 @@
       pipContainer.classList.remove("show");
       pipModeActive = false;
       document.querySelector(".pip-toggle").innerHTML = "<i>📺</i> Enter PiP Mode";
+    }
+
+    // Sync PiP inputs with main inputs
+    function syncPipInputs() {
+      document.getElementById("pipDays").value = document.getElementById("days").value;
+      document.getElementById("pipHours").value = document.getElementById("hours").value;
+      document.getElementById("pipMinutes").value = document.getElementById("minutes").value;
+      document.getElementById("pipSeconds").value = document.getElementById("seconds").value;
     }
 
     // Draggable PiP window functionality
@@ -1258,7 +1351,7 @@
     // Initialize draggable functionality
     makePipDraggable();
 
-    // PiP control functions - FIXED: Now properly connected to main timer
+    // FIXED PiP control functions - Now properly connected to main timer
     function pipToggleStopwatch() {
       // Use the same toggleStopwatch function to maintain sync
       toggleStopwatch();
@@ -1279,6 +1372,7 @@
       clearLaps();
     }
     
+    // FIXED: PiP countdown functions with proper input handling
     function pipStartCountdown() {
       if (countdownRunning) return;
       
@@ -1293,32 +1387,109 @@
         return;
       }
       
+      // Set the countdown time from PiP inputs
+      countdownTime = d * 86400 + h * 3600 + m * 60 + s;
+      
       // Also update main inputs to keep them in sync
       document.getElementById("days").value = d;
       document.getElementById("hours").value = h;
       document.getElementById("minutes").value = m;
       document.getElementById("seconds").value = s;
       
-      // Use the same startCountdown function to maintain sync
-      if (countdownTime === 0) countdownTime = d * 86400 + h * 3600 + m * 60 + s;
-      startCountdown();
+      // Start the countdown
+      document.getElementById("countdownMessage").style.display = "none";
+      document.getElementById("pipCountdownMessage").style.display = "none";
+      countdownRunning = true;
+      document.getElementById("pipCountdownToggle").innerHTML = "<i>⏸️</i> Pause";
+      
+      countdownInterval = setInterval(() => {
+        if (countdownTime <= 0) {
+          countdownTime = 0;
+          updateCountdownDisplay();
+          clearInterval(countdownInterval);
+          countdownRunning = false;
+          document.getElementById("pipCountdownToggle").innerHTML = "<i>▶️</i> Start";
+          playBuzzer();
+          document.getElementById("countdownMessage").style.display = "block";
+          document.getElementById("pipCountdownMessage").style.display = "block";
+          return;
+        }
+        countdownTime--;
+        updateCountdownDisplay();
+      }, 1000);
     }
     
     function pipStopCountdown() {
-      // Use the same stopCountdown function to maintain sync
-      stopCountdown();
+      clearInterval(countdownInterval);
+      countdownRunning = false;
+      document.getElementById("pipCountdownToggle").innerHTML = "<i>▶️</i> Resume";
     }
     
     function pipResetCountdown() {
-      // Use the same resetCountdown function to maintain sync
-      resetCountdown();
+      clearInterval(countdownInterval);
+      countdownRunning = false;
+      countdownTime = 0;
+      updateCountdownDisplay();
       
-      // Also reset PiP inputs
-      document.getElementById("pipDays").value = 0;
-      document.getElementById("pipHours").value = 0;
-      document.getElementById("pipMinutes").value = 0;
-      document.getElementById("pipSeconds").value = 0;
+      // Reset all inputs
+      document.getElementById("days").value = "";
+      document.getElementById("hours").value = "";
+      document.getElementById("minutes").value = "";
+      document.getElementById("seconds").value = "";
+      document.getElementById("pipDays").value = "";
+      document.getElementById("pipHours").value = "";
+      document.getElementById("pipMinutes").value = "";
+      document.getElementById("pipSeconds").value = "";
+      
+      // Hide messages
+      document.getElementById("countdownMessage").style.display = "none";
+      document.getElementById("pipCountdownMessage").style.display = "none";
+      
+      // Reset button text
+      document.getElementById("pipCountdownToggle").innerHTML = "<i>▶️</i> Start";
     }
+
+    // Add input event listeners for PiP countdown inputs
+    document.addEventListener('DOMContentLoaded', function() {
+      const pipInputs = [
+        'pipDays', 'pipHours', 'pipMinutes', 'pipSeconds'
+      ];
+      
+      pipInputs.forEach(inputId => {
+        const input = document.getElementById(inputId);
+        if (input) {
+          input.addEventListener('input', function() {
+            // Validate and limit values
+            let value = parseInt(this.value) || 0;
+            
+            if (inputId === 'pipHours' && value > 23) {
+              value = 23;
+              this.value = 23;
+            } else if ((inputId === 'pipMinutes' || inputId === 'pipSeconds') && value > 59) {
+              value = 59;
+              this.value = 59;
+            } else if (value < 0) {
+              value = 0;
+              this.value = 0;
+            }
+            
+            // Sync with main inputs
+            const mainInputId = inputId.replace('pip', '').toLowerCase();
+            const mainInput = document.getElementById(mainInputId);
+            if (mainInput) {
+              mainInput.value = value;
+            }
+          });
+
+          // Also handle blur event for better UX
+          input.addEventListener('blur', function() {
+            if (this.value === "") {
+              this.value = "";
+            }
+          });
+        }
+      });
+    });
 
     // Close PiP when clicking outside (on mobile)
     document.addEventListener('click', function(event) {
@@ -1351,7 +1522,6 @@
       fetch('https://www.google.com/s2/favicons?domain=stopwatch.calandtimesolutions.com')
         .then(response => console.log('Favicon fetch triggered:', response.status));
     }, 2000);
-</script>
+  </script>
 </body>
 </html>
-
